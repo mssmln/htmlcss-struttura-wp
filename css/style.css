@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-.clearfix{
+.clearfix::after{
   content: '';
   display: table;
   clear: both;
@@ -19,7 +19,8 @@
   padding: 10px;
 }
 main{
-  width: 80%;
+  width: 100%;
+  height: 80%;
   background-color: lightgray;
 }
 .container header{
@@ -30,8 +31,8 @@ main{
 }
 /* does float: left; make sense? */
 .container aside.left-column{
-  width: 300px;
-  height: 100px;
+  width: 25%;
+  height: 100%;
   background-color: pink;
   float: left;
 }
@@ -39,10 +40,27 @@ main{
   width: 50%;
   height: 300px;
   background-color: green;
+  float: left;
 }
+
 .container aside.right-column{
-  width: 300px;
-  height: 100px;
+  width: 25%;
+  height: 100%;
   background-color: pink;
   float: right;
+}
+aside.right-column .top-box{
+  width: 100px;
+  height: 100px;
+  background-color: green;
+}
+aside.right-column .middle-box{
+  width: 100px;
+  height: 100px;
+  background-color: black;
+}
+aside.right-column .bottom-box{
+  width: 100px;
+  height: 100px;
+  background-color: blue;
 }
